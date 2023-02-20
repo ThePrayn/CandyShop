@@ -1,6 +1,6 @@
 import React from 'react'
 import { Select, Space } from 'antd';
-export default function Item(props) {
+export default function ItemGoods(props) {
     const { item } = props
   return (
     <div className='item'>
@@ -12,7 +12,9 @@ export default function Item(props) {
         <Space wrap className='select'>
     <Select
       defaultValue="100 гр"
-      style={{width: 120,}}
+      style={{
+        width: 120,
+      }}
       options={[
         {
           value: '100 гр',

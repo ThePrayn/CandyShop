@@ -4,15 +4,15 @@ import { Button, Space } from 'antd';
 export default function Items(props) {
   return (
 <div><h1 className='titul'>Наша продукция</h1>
-<main id='goods'>
+<main id='home-goods'>
 {props.items.map(item => <Item key={item.id} item={item}/>)}
 </main>
 <div className='mian-button'>
 <Space wrap>
-    <Button>Посмотреть все товары</Button>
+    <Button href='/goods'>Посмотреть все товары</Button>
   </Space>
   </div>
-</div>
+</div> 
 );
 
 }

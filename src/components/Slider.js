@@ -7,7 +7,7 @@ export default function Slider() {
       
         return (
           <div className='slider'>
-          
+              
             <Carousel autoplay className='slider-item'>
               <div >
                 <div className="carousel-text">

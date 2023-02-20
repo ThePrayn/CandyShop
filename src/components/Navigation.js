@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Navigations () {
@@ -8,10 +9,10 @@ export default function Navigations () {
         <div className="container">
           <h3>+7354644684</h3>
           <ul className="nav-items">
-            <li className="nav-item"><a href='/'>Главная</a></li>
-            <li className="nav-item"><a href='/goods'>Наши товары</a></li>
-            <li className="nav-item"><a href='/about'>О нас</a></li>
-            <li className="nav-item"><a href='/basket'>Корзина</a></li>
+            <li className="nav-item"><Link to='/' >Главная</Link></li>
+            <li className="nav-item"><Link to='/goods'>Наши товары</Link></li>
+            <li className="nav-item"><Link to='/about'>О нас</Link></li>
+            <li className="nav-item"><Link to='/basket'>Корзина</Link></li>
           </ul>
         </div>
       </nav>

@@ -19,6 +19,8 @@ background-color: #362c38;
 color: #eee1dc;
 font-family: 'Montserrat', sans-serif;
 font-weight: 300;
+height: 100%;
+width: 100%;
 }
 
 /* Container Styles */
@@ -27,6 +29,8 @@ margin: 0 auto;
 padding: 0 15px;
 max-width: 1200px;
 }
+
+                                                        /* !!!! HOME PAGE !!!! */
 
 /* Navigation Styles */
 .nav {
@@ -57,6 +61,10 @@ list-style-type: none;
 padding: 10px 20px;
 }
 
+.link:active{
+  text-decoration: none;
+}
+
 /* Header Styles */
 .header {
 padding: 40px 0;
@@ -85,6 +93,7 @@ text-align: center;
   height: 550px;
   display: flex;
   justify-content:center;
+  align-items: center;
 }
 
 .carousel-text {
@@ -170,12 +179,11 @@ main {
 }
 main .item{
   width: 250px;
-  height: 30%;
+  height: 500px;
   margin-bottom: 50px;
   background: #8f613600;
   overflow: hidden;
   position: relative;
- padding: 20px;
 }
 main .item img{
   width: 250px;
@@ -285,3 +293,133 @@ main .add-to-card:hover,
 }
 
 .text-area{margin: 10px;}
+                                                 /* !!!! GOODS PAGE !!!! */
+#goods{
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+  width: 1000px;
+  left: 290px;
+  /* padding-left: 300px;
+  padding-right: 300px; */
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+
+.categ {
+  margin-top: 20px;
+  left: 420px;
+
+}
+
+.input-find {
+  left: 370px;
+}
+
+
+                                            /* !!!! ABOUT PAGE !!!! */
+
+.header-about{
+padding: 40px 0;
+width: auto;
+min-height: 695px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url('./img/about.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+background-position: center center;
+text-align: center;
+}
+
+.before-header-about{
+justify-content: center;
+align-items: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  min-height: 695px;
+  background-color: #000000c0;
+}
+
+.header-about-text{
+  position: relative;
+  left: 420px;
+  top: 100px;
+  width: 700px;
+  margin: 30px 30px;
+}
+
+.header-about-text h3{
+  position: relative;
+ padding: 30px 30px
+}
+
+.Carousel-1{
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  width: 600px;
+  height: 350px;
+  padding: 30px;
+  right: 300px;
+  }
+  
+  .Carousel-2{
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  width: 600px;
+  left: 450px;
+
+  }
+  .carousel-text1{
+  position: absolute;
+  bottom: 0;
+  left: 600px;
+  width: 600px;
+  padding: 20px;
+  }
+  
+  .carousel-text2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  padding: 20px;
+  right: 700px;
+  }
+
+  .carousel-3-zone{
+    background-color: #151216;
+    height: 500px;
+  }
+
+  .Carousel-3{
+    position: relative;
+    padding: 10px;
+    bottom: 300px;
+    left: 400px;
+    width: 800px;
+    height: 300px;
+    color: #fff;
+    background-color: #000000a4;
+    }
+
+  .carousel-text3{
+    color: #eee1dc;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .last-img{
+    position: relative;
+    top: 50px;
+    left: 400px;
+  }
+
