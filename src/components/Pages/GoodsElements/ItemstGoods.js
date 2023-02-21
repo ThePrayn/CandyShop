@@ -7,8 +7,10 @@ export default function ItemstGoods(props) {
     <div>
         
       <main id='goods'>
-       {props.filteredGoods.map(item => <ItemGoods key={item.id} item={item}/>)}
+       {props.filteredGoods.map(item => <ItemGoods key={item.id} item={item} />)}
       </main>
 </div>
   )
 }
+
+// addToOrder={props.addToOrder}
