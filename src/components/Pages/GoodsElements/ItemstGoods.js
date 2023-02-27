@@ -5,7 +5,6 @@ export default function ItemstGoods(props) {
   
   return (
     <div>
-        
       <main id='goods'>
        {props.filteredGoods.map(item => <ItemGoods key={item.id} item={item} />)}
       </main>
@@ -13,4 +12,3 @@ export default function ItemstGoods(props) {
   )
 }
 
-// addToOrder={props.addToOrder}

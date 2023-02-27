@@ -17,15 +17,18 @@ function App() {
  
   const addToOrder = (item) => {
    setGoodInBasket([...goodInBasket, item])
-   console.log(goodInBasket)
    }
 
-
+   const delFromOrder = (index) => {
+    const deleteItem = [...goodInBasket]
+    deleteItem.splice(index, 1)
+    setGoodInBasket(deleteItem)
+   }
 
 
   return (
     <div className="App">
-      <MyContext.Provider value={{goodInBasket, setGoodInBasket, addToOrder}}>
+      <MyContext.Provider value={{goodInBasket, setGoodInBasket, addToOrder, delFromOrder}}>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
