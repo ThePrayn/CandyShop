@@ -7,7 +7,7 @@ export default function Navigations () {
     <div>
       <nav className="nav">
         <div className="container">
-          <h3 className='logo'>+7354644684</h3>
+          <h3 className='logo'>Marmelad-Store</h3>
           <ul className="nav-items">
             <li className="nav-item"><Link to='/' >Главная</Link></li>
             <li className="nav-item"><Link to='/goods'>Наши товары</Link></li>

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { MyContext } from '../../App';
-import { Select, Space } from 'antd';
+import { Select, Space, Button } from 'antd';
 
 export default function Basket() {
   const { goodInBasket, delFromOrder } = useContext(MyContext);
@@ -64,12 +64,14 @@ export default function Basket() {
         <div className='shop-cart-item-title'>{item.title}</div>
         <div className='shop-cart-item-weight'>{grams(index)}</div>
         <div className='shop-cart-item-price'>{prices[index]} руб.</div>
-        <button onClick={() => delFromOrder(index)}>Удалить</button>
+        <Button onClick={() => delFromOrder(index)}>Удалить</Button>
       </div>
     </div>
   ));
 
   const total = prices.reduce((acc, curr) => acc + curr, 0);
+
+  
 
   return (
     <div className="basket-container">
@@ -90,25 +92,53 @@ export default function Basket() {
     </div>
     <div className="basket-summary-row">
       <span>Доставка:</span>
-      <select>
-        <option value="0">Выберите способ доставки</option>
-        <option value="1">Доставка курьером</option>
-        <option value="2">Самовывоз</option>
-      </select>
+      <Space wrap className='select'>
+      <Select
+        defaultValue= 'Получение заказа'
+        style={{
+          width: 180,
+        }}
+        options={[
+          {
+            value: 'Самовывоз',
+            label: 'Самовывоз',
+          },
+          {
+            value: 'Курьер',
+            label: 'Доставка курьером',
+          }
+        ]}/>
+    </Space>
     </div>
     <div className="basket-summary-row">
       <span>Оплата:</span>
-      <select>
-        <option value="0">Выберите способ оплаты</option>
-        <option value="1">Оплата наличными</option>
-        <option value="2">Оплата картой</option>
-      </select>
+      <Space wrap className='select'>
+      <Select
+        defaultValue= 'Способ оплаты'
+        style={{
+          width: 180,
+        }}
+        options={[
+          {
+            value: 'Наличные',
+            label: 'Оплата наличными',
+          },
+          {
+            value: 'Карта',
+            label: 'Оплата картой',
+          },
+          {
+            value: 'QR',
+            label: 'Оплата через СБП',
+          }
+        ]}/>
+    </Space>
     </div>
     <div className="basket-summary-row">
       <span>Итого:</span>
       <span>{total} руб</span>
     </div>
-    <button className="basket-checkout-button">Оформить заказ</button>
+    <Button className="basket-checkout-button">Оформить заказ</Button>
   </div>
 </div>
   );
